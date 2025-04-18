@@ -1,2 +1,33 @@
+site_name: 服务器使用指南
 theme: readthedocs
 site_name: My Docs
+
+nav:
+  - 首页: index.md
+  - 硬件概览: 
+    - 配置清单: overview/hardware.md
+    - 拓扑结构: overview/topology.md
+  - 系统配置:
+    - 操作系统安装: configuration/os-install.md
+    - 基础环境: configuration/base-env.md
+    - GPU驱动: configuration/gpu-driver.md
+  - 深度学习环境:
+    - Conda管理: environment/conda.md
+    - Docker配置: environment/docker.md
+  - 任务管理:
+    - 监控系统: management/monitoring.md
+    - 调度策略: management/scheduling.md
+  - 维护指南:
+    - 日常维护: maintenance/routine.md
+    - 备份策略: maintenance/backup.md
+  - 实践案例: 
+    - 最佳实践: best-practices.md
+  - 常见问题: faq.md
+  - 附录: appendix.md
+
+plugins:
+  - search
+  - codehilite
+
+# extra_css:
+#   - css/custom.css
