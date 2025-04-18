@@ -24,9 +24,9 @@ ssh 用户名@服务器IP地址 -p 端口号
 
 - **命令行传输**：
 
-  ```bash
-  scp -P 2222 本地文件路径 zhangsan@服务器IP:目标路径
-  ```
+```bash
+scp -P 2222 本地文件路径 zhangsan@服务器IP:目标路径
+```
 
 - **可视化工具**：FileZilla/WinSCP（协议选SFTP，端口2222）
 
@@ -57,15 +57,15 @@ sudo 命令
 
 1. 验证驱动状态：
 
-   ```bash
-   nvidia-smi  # 应有GPU状态输出
-   ```
+```bash
+nvidia-smi  # 应有GPU状态输出
+```
 
 2. 检查CUDA版本：
 
-   ```bash
-   nvcc --version
-   ```
+```bash
+nvcc --version
+```
 
 3. 确认PyTorch/TensorFlow版本匹配（[版本对照表](../environment/conda.md)）
 
@@ -77,21 +77,21 @@ sudo 命令
 
 1. 检查显存占用：
 
-   ```bash
-   watch -n 1 nvidia-smi
-   ```
+```bash
+watch -n 1 nvidia-smi
+```
 
 2. 释放残留进程：
 
-   ```bash
-   kill -9 $(ps -ef | grep python | awk '{print $2}')
-   ```
+```bash
+kill -9 $(ps -ef | grep python | awk '{print $2}')
+```
 
 3. 代码调整：
 
-   ```python
-   torch.cuda.empty_cache()  # PyTorch清理缓存
-   ```
+```python
+torch.cuda.empty_cache()  # PyTorch清理缓存
+```
 
 ---
 
@@ -173,17 +173,17 @@ docker run hello-world  # 不应提示权限错误
 
 1. 查看磁盘使用：
 
-   ```bash
-   df -h  # 查看各分区
-   du -sh * | sort -h  # 定位大文件
-   ```
+```bash
+df -h  # 查看各分区
+du -sh * | sort -h  # 定位大文件
+```
 
 2. 清理缓存：
 
-   ```bash
-   sudo apt clean  # 清理包缓存
-   docker system prune  # 清理Docker缓存
-   ```
+```bash
+sudo apt clean  # 清理包缓存
+docker system prune  # 清理Docker缓存
+```
 
 ---
 
@@ -193,17 +193,17 @@ docker run hello-world  # 不应提示权限错误
 
 1. 使用`tmux`会话保护：
 
-   ```bash
-   tmux new -s mytask  # 新建会话
-   Ctrl+b d            # 暂时退出
-   tmux attach -t mytask  # 重新连接
-   ```
+```bash
+tmux new -s mytask  # 新建会话
+Ctrl+b d            # 暂时退出
+tmux attach -t mytask  # 重新连接
+```
 
 2. 检查系统日志：
 
-   ```bash
-   journalctl -u service_name --since "10分钟前"
-   ```
+```bash
+journalctl -u service_name --since "10分钟前"
+```
 
 ---
 
@@ -227,15 +227,15 @@ nvidia-smi   # GPU状态
 
 1. 检查本地网络：
 
-   ```bash
-   ping 服务器IP
-   ```
+```bash
+ping 服务器IP
+```
 
 2. 检查防火墙：
 
-   ```bash
-   sudo ufw status  # 查看防火墙规则
-   ```
+```bash
+sudo ufw status  # 查看防火墙规则
+```
 
 3. 联系管理员确认服务器状态
 
@@ -247,15 +247,15 @@ nvidia-smi   # GPU状态
 
 1. Conda清华源：
 
-   ```bash
-   conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-   ```
+```bash
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+```
 
 2. Pip阿里云源：
 
-   ```bash
-   pip install 包名 -i https://mirrors.aliyun.com/pypi/simple
-   ```
+```bash
+pip install 包名 -i https://mirrors.aliyun.com/pypi/simple
+```
 
 ---
 
