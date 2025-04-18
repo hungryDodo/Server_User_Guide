@@ -69,6 +69,7 @@ model.unet.enable_xformers_memory_efficient_attention(
 ```
 
 **测试数据表**  
+
 | 配置                  | Batch Size | GPUs | 吞吐量 (samples/sec) | 显存占用 (GB) |
 |----------------------|------------|------|---------------------|--------------|
 | 单节点 A100x8         | 1024       | 8    | 38.2                | 32           |
