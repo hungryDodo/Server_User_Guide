@@ -27,7 +27,9 @@ nav:
 
 plugins:
   - search
-  - codehilite
+
+markdown_extensions:
+- codehilite
 
 # extra_css:
 #   - css/custom.css
