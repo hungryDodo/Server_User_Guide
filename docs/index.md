@@ -4,4 +4,4 @@
 
 目前的目录：
 
-- ![快速开始](guides/quickstart.md)
+- [快速开始](guides/quickstart.md)
