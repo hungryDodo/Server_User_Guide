@@ -31,9 +31,13 @@
 ## 三、VNC可视化环境配置
 ### 1. 启动VNC服务
 
+输入：
+
 ```bash
 $ vncserver
 ```
+
+输出：
 
 ```terminal
 New Xtigervnc server 'ta:3 (guorun)' on port 5903 for display :3.
@@ -41,8 +45,8 @@ Use xtigervncviewer -SecurityTypes VncAuth,TLSVnc -passwd /data/home/guorun/.vnc
 ```
 
 - 关键参数说明：
-   - `:3` 表示显示编号（对应端口5903）
-   - 密码文件路径：`/home/username/.vnc/passwd`
+    - `:3` 表示显示编号（对应端口5903）
+    - 密码文件路径：`/home/username/.vnc/passwd`
 
 
 ### 2. 连接VNC会话
