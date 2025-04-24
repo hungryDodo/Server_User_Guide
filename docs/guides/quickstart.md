@@ -18,26 +18,47 @@
 - 选择SSH协议，填写服务器IP地址
 - 勾选"Specify username"输入账户名（可选）
 
-![图1：新建SSH会话](img/create_new_session.png)
+![新建SSH会话](img/create_new_session.png)
 
-### 2. 安全验证设置
+### 2. 修改密码
+
+- 修改系统登录密码（建议首次登录后立即操作）：
+
+```bash
+$ passwd
+```  
+
+- 依次输入当前密码、新密码并确认。 
+
+### 3. 自动保存密码
 
 - 点击设置
 - 修改密码管理设置
 - 推荐选择总是自动保存密码
 
-![图2：密码保存设置](img/auto_save_passwd.png)
+![密码保存设置](img/auto_save_passwd.png)
 
 ## 三、VNC可视化环境配置
-### 1. 启动VNC服务
 
-输入：
+### 1. 设置VNC连接密码​
+
+- 首次使用VNC前需通过SSH终端设置密码：
+
+```bash
+$ vncpasswd
+```
+
+- 按提示输入并确认密码（输入时无回显），密码文件将保存至 `~/.vnc/passwd`。  
+
+### 2. 启动VNC服务
+
+- 输入`vncserver`命令启动服务：
 
 ```bash
 $ vncserver
 ```
 
-输出：
+- 可以从回显当中看到一些启动信息：
 
 ```terminal
 New Xtigervnc server 'ta:3 (guorun)' on port 5903 for display :3.
@@ -46,16 +67,15 @@ Use xtigervncviewer -SecurityTypes VncAuth,TLSVnc -passwd /data/home/guorun/.vnc
 
 - 关键参数说明：
     - `:3` 表示显示编号（对应端口5903）
-    - 密码文件路径：`/home/username/.vnc/passwd`
 
 
-### 2. 连接VNC会话
+### 3. 连接VNC会话
 
 - 新建VNC类型会话（图3）
 - 地址格式：`IP地址:显示编号`（示例：`192.168.1.100:3`）
 - 输入VNC服务密码（首次需在SSH终端通过`vncpasswd`设置）
 
-![图3：VNC连接配置](img/connect_vnc_session.png)
+![VNC连接配置](img/connect_vnc_session.png)
 
 ## 四、连接管理建议
 
