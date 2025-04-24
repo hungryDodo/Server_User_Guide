@@ -6,6 +6,7 @@ nav:
   - 首页: index.md
   - 快速指南:
     - 快速开始: guides/quickstart.md
+    - 存储说明: guides/storage.md
   - 环境配置:
     - 基础环境:
       - CUDA安装: env/cuda.md
@@ -13,8 +14,6 @@ nav:
   - 开发工具链:
     - IDE配置:
       - PyCharm配置: tools/pycharm.md
-    - 远程协作:
-      - VNC配置指南: tools/vnc-conf.md
 
 plugins:
   - search
